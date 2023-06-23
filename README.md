@@ -1,0 +1,1 @@
+"M E T A Django Course repo"
