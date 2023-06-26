@@ -37,6 +37,9 @@ def home(request, name):
 
     return HttpResponse(dp1 + dp2)
 
+    def index(request):
+        return HttpResponse('<h1>I N D E X - A L X - A P P</h1>')
+
 
 
 
