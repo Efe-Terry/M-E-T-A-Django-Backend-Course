@@ -61,4 +61,5 @@ def food(request, n, name):
         }
     ]
     des = item[n][name]
-    return HttpResponse(f'<h1>FOOD</h1><br/><p>Position: {n} - Name of food:{name}</p>' + f'Discription: {des}')
+
+    return HttpResponse(f'<h1>FOOD</h1><br/><h3>{item[n]}</h3><br/><p>Position: {n} - Name of food:{name}</p>' + f'Discription: {des}')
