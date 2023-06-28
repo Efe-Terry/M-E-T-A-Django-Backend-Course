@@ -1,4 +1,3 @@
-"""
 from unicodedata import name
 from django.db import models
 
@@ -18,4 +17,4 @@ class Menu(models.Model):
 
     def __str__(self):
         return f'name -> {self.name} : cuisine -> {self.cuisine} : price -> {self.price}'
-"""
+
