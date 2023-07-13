@@ -11,4 +11,5 @@ urlpatterns = [
     path("getform/", views.getform, name='getform'),
     path("coffe/<str:name>", views.coffe, name="coffe"),
     path("food/<int:n>/<name>/", views.food, name="food"),
+    path("form/", views.form_view, name="form"),
 ]

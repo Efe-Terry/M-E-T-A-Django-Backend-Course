@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 from django.template import loader 
 
+from myapp.forms import InputForm
+
 def home(request):
     content = "Hello From Little Lemon Resturant"
     return HttpResponse(content)
@@ -63,3 +65,8 @@ def food(request, n, name):
     des = item[n][name]
 
     return HttpResponse(f'<h1>FOOD</h1><br/><h3>{item[n]}</h3><br/><p>Position: {n} - Name of food:{name}</p>' + f'Discription: {des}')
+
+def form_view(request):
+    form = InputForm()
+    context = {"form": form}
+    return render(request, "form_little_leamon.html", context)
