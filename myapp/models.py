@@ -22,7 +22,7 @@ class Vehicle(models.Model):
         on_delete=models.CASCADE, 
         related_name='Vehicle' 
     ) 
-
+'''
 class Person(models.Model): 
     person_name = models.CharField(max_length=100)
     #email = models.EmailField() 
@@ -30,3 +30,25 @@ class Person(models.Model):
 
     def __str__(self):
         return f'name -> {self.person_name} : price -> {self.phone}'
+'''
+class Person(models.Model): 
+    last_name = models.CharField(max_length=200, default="last_name")
+    first_name = models.CharField(max_length=200, default="first_name")
+
+    def __str__(self):
+        return f"{self.last_name}, {self.first_name}"
+
+class Logger(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    time_log = models.DateTimeField('Enter Reservation Time')
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=100, blank=True)
+    contact = models.CharField('Phone Number', max_length=300)
+    time = models.TimeField()
+    count = models.IntegerField()
+    notes = models.CharField(max_length=300, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
