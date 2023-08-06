@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Add heading code -->
+    <h1 style="color: #495E57"> Menu </h1>
+    <!-- Add paragraph code -->
+
+
+    <h2> {{ hr.first_name }}</h2>
+
+    {% for key, value in hr.items %}
+    <h1>{{Key}} : {{value}}</h1>
+    <h4>Helper Class</h4>
+    <li>{{ forloop.counter }} : {{ value }}</li> 
+    {% endfor %}
+
+    <h2>HERE</h2>
+
+    <!-- Add image code -->
+
+    {% for x in items %}
+    <li>{{x}}</li>
+    {% endfor %}
+
+    {% if user == "admin" %}
+    <h2>Welcome {{user}}</h2>
+    {% else%}
+    <h2>Welcome guest. Leave a massage for the {{user}}</h2>
+    {% endif %}
+</body>
+
+</html>
